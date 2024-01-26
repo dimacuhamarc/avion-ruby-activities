@@ -1,23 +1,37 @@
 #Polymorphism by duck typing
-
-class Car
-  attr_reader :name, :price, :color, :quality, :doors
-  def initialize(name, price, color, quality, doors)
-    @name = name
-    @price = price
-    @color = color
-    @quality = quality
-    @doors = doors
-  end
-end
-
-class Motorcycle
+class Vehicle
   attr_reader :name, :price, :color, :quality
   def initialize(name, price, color, quality)
     @name = name
     @price = price
     @color = color
     @quality = quality
+  end
+
+  def type(vehicle)
+    vehicle.type
+  end
+  
+end
+class Car
+  attr_reader :name, :price, :color, :quality, :type
+  def initialize(name, price, color, quality, type)
+    @name = name
+    @price = price
+    @color = color
+    @quality = quality
+    @type = "Car"
+  end
+end
+
+class Motorcycle
+  attr_reader :name, :price, :color, :quality, :type
+  def initialize(name, price, color, quality, type)
+    @name = name
+    @price = price
+    @color = color
+    @quality = quality
+    @type = "Motorcycle"
   end
 end
 
@@ -34,18 +48,17 @@ def vehicle_info(vehicle)
   puts "Price: #{vehicle.price}"
   puts "Color: #{vehicle.color}"
   puts "Quality: #{vehicle.quality}"
-  if vehicle.class == Car
-    puts "Doors: #{vehicle.doors}"
-  end
+  puts "Type: #{vehicle.type}"
 end
 
-car1 = Car.new("Toyota", 1000000, "Red", "Brand new", 4)
-motorcycle1 = Motorcycle.new("Honda", 500000, "Blue", "Second Hand")
+car = Car.new("Toyota", 890000, "Red", "Brand New", "Car")
+motorcycle = Motorcycle.new("Honda", 50000, "Black", "Second Hand", "Motorcycle")
 
-puts "Vehicle 1"
-vehicle_info(car1)
-puts "Reselling price: #{reselling_price(car1)}"
-puts "\n"
-puts "Vehicle 2"
-vehicle_info(motorcycle1)
-puts "Reselling price: #{reselling_price(motorcycle1)}"
+puts "Vehicle Info"
+puts "------------"
+vehicle_info(car)
+puts "Reselling price for #{car.name} is #{reselling_price(car)}"
+puts "------------"
+vehicle_info(motorcycle)
+puts "Reselling price for #{motorcycle.name} is #{reselling_price(motorcycle)}"
+puts "------------"
