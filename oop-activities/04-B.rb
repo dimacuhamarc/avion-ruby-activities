@@ -12,9 +12,7 @@ class Cupcake < Confection
   end
 end
 
-class Banana_Cake < Confection
-
-end
+class Banana_Cake < Confection; end
 
 my_cupcake = Cupcake.new
 my_cupcake.prepare
