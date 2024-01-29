@@ -36,7 +36,7 @@ class House < Property
   def initialize(color, sqm, price)
     @color = color
     @sqm = sqm
-    @price = super(nil,nil,price)
+    @price = price
   end
 
   def for_sale
