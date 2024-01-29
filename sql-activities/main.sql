@@ -7,9 +7,9 @@ CREATE TABLE students (
 	location	CHARACTER(50)	NOT NULL
 );
 
-SELECT * FROM students;
+-- SELECT * FROM students;
 
-DROP TABLE students;
+-- DROP TABLE students;
 
 INSERT INTO students
 	( id, first_name, last_name, age, location )
