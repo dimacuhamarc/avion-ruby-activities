@@ -1,3 +1,5 @@
+-- ACTIVITY 1
+
 CREATE TABLE students (
 	id			INTEGER			PRIMARY KEY,
 	first_name	CHARACTER(50)	NOT NULL,
@@ -33,3 +35,13 @@ UPDATE students
 
 DELETE FROM students
 	WHERE id = (SELECT MAX(id) FROM students);
+
+-- ACTIVITY 2
+
+SELECT COUNT(id) FROM students;
+
+SELECT COUNT(id) FROM students WHERE location = 'Manila';
+
+SELECT AVG(age) AS average_age FROM students;
+
+SELECT * FROM students ORDER BY age DESC;
