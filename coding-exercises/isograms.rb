@@ -1,12 +1,4 @@
-# ISOGRAMS
-
-# An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines
-# whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
-
-# Tip: Output must be boolean
-
-# Note: Avoid using of .uniq method
-
+## ISOGRAMS
 
 ## iteration 1
 # def is_isogram(string)
