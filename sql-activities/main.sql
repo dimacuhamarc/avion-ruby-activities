@@ -80,5 +80,5 @@ SELECT s.first_name, s.last_name, COUNT(r.id) AS number_of_research_papers FROM 
 SELECT s.first_name, s.last_name, r.id AS research_paper_id, r.grade FROM students s
 	LEFT JOIN research_papers r ON s.id = r.student_id
 		WHERE r.grade IS NULL
-			GROUP BY s.id, s.first_name, s.last_name, r.id, r.grade
+			GROUP BY s.first_name, s.last_name, r.id, r.grade
 				HAVING COUNT(r.id) > 0;
