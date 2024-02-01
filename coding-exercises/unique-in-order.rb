@@ -18,13 +18,7 @@
 #   temp
 # end
 
-## Iteration 3
-# def unique_in_order(input)
-#   input.class == String ? input = input.split("") : input
-#   input.each_with_object([]) { |item, temp| temp.last == item ? next : temp.push(item) }
-# end
-
-## Iteration 4 Final
+## Iteration 3 Final
 def unique_in_order(input)
   input.class == String ? input = input.split("") : input
   temp = []
